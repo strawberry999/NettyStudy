@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.cib.strawberry'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'io.netty:netty-all:4.1.9.Final'
+
+    // This dependency is exported to consumers, that is to say found on their compile classpath.
+    compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
+
+    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
+    implementation 'com.google.guava:guava:23.0'
+}

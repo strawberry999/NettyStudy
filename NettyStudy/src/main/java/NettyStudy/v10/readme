@@ -1,0 +1,3 @@
+去掉start按钮的监听
+创建ServerFrame的时候直接启动server
+加入updateClientMsg，在接收到客户端消息的时候调用
